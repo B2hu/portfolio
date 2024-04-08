@@ -1,0 +1,266 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    /*
+    CSS comment
+    The box-sizing CSS property sets how the total width and height of an element are
+    calculated.
+    If you set box-sizing: border-box; on an element, padding, and border are
+    included in the width and height:
+    */
+    }
+body {
+    line-height: 1.6;
+    margin: 0;
+    }
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+            /*
+            list-style: none = No marker is shown
+            */
+    }
+a {
+    color: #34495e;text-decoration: none;
+                /*
+                text-decoration: none - is used here to not show underlining under an anchor
+                element when a mouse hovers over it.
+                Comment it out and check the result on the page.
+                */
+    }
+.logo {
+    margin: 0;
+    font-size: 1.1em;
+    }
+section {
+        padding: 10px 15px;
+        margin: 10px;
+        display: block;
+        /*
+        display: block - displays an element as a block element. It starts on a new
+        line, and takes up the whole width
+        */
+    }
+.header {
+        padding-top: .5em;
+        padding-bottom: .5em;
+        border: 1px solid #646174;
+        background-color: #a2ccea;
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        /*
+        -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow and -moz-box-shadow were browser-specific box-shadow
+        implementations for
+        WebKit browsers like Google Chrome and Safari, and mozilla firefox. Such prefixes
+        are, usually
+        used, when a new CSS feature appears and disappears when the feature is fully
+        supported by
+        the browser.
+        In short, concerning Vendor Prefixes (-webkit, -moz, etc.):
+        1- A new CSS feature appears;
+        2- Browsers test the feature;
+        3- Browsers add a prefix to it to allow using it;
+        4- There is no need for the prefix anymore when the feature is fully supported.
+        */
+        border-radius: 5px;
+        }
+.nav {
+    margin-top: 5px;
+    }
+.nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    color: #34495e;
+    font-size: .99em;
+    }
+            /* Pseudo-class selector */
+.nav a:hover {
+    background-color:#7ebeb6;
+    color: #092747;
+    }
+
+/*
+Applies when the browser's width is 800px wide or wider:
+*/
+@media (min-width: 800px) {
+    .header,
+    .nav {
+    display: flex;
+    }
+    .header {
+    flex-direction: column;
+    align-items: center;
+    }
+    }
+    /*
+    Applies when the browser's width is 1000px wide or wider:
+    */
+    @media (min-width: 1000px) {
+    .header {
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    }
+    .grid {
+        margin: 20px auto;
+        width: 100%;
+        border: 1px solid #746161;
+        background-color: #ddd;
+        display: grid;
+        grid-template-columns: auto auto;
+        /*
+        grid-template-columns - the grid-template-columns CSS property defines the
+        numbers and
+        sizing functions of the grid columns.
+        */
+        gap: 10px 10px;
+        /*
+        gap: row-gap and column-gap.
+        */
+        }
+        .grid p {
+        background-color: rgb(177, 164, 164);
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        text-align: center;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999; /* Ensures the navigation bar stays on top of other content */
+        }
+p:hover {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+/* Assuming the student's grade is inside an element with class "grade" */
+tbody tr td:last-child {
+    color: green;
+}
+table > thead > tr > th {
+    /* Your styles here */
+    background-color: lightblue; /* Change to your desired background color */
+}
+table > tbody > tr > td {
+    /* Your styles here */
+    background-color: lightgray; /* Change to your desired background color */
+}
+p::first-letter {
+    font-size: xx-large;
+}
+footer {
+    text-align: center; /* Align text to center */
+    color: #666666; /* Change text color */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Add background color */
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    margin: 5px;
+    color: #666666;
+    text-decoration: none;
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+section img {
+    border-radius: 50%;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+section strong {
+    font-size: 1.2em;
+}
+.immaculate-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 16px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.attendance-options {
+    display: flex;
+    align-items: center;
+}
+
+.attendance-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #108ee3;
+}
+
+
+
+
+        
+ 
+        

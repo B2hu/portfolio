@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="res/images/Favicon.ico">
+ <link rel="stylesheet" href="res/css/style.css">
+ <title>My Dashboard</title>
+ </head>
+ <body>
+    <header class="header">
+        <strong>Welcome to your dashboard!</strong>
+    </header>
+    <section>
+        <div>
+            <img src="res/images/me.png" width="128" height="128" alt="My picture">
+        </div>
+        <div>
+            <ul>
+                <li>Ahmed BAHYA</li>
+                <li> 16/05/2003</li>
+                <li> Software Engineering </li>
+            </ul>
+        </div>
+        <div>
+            <strong>2.65</strong>
+        </div>
+    </section>
+    <section>
+        <h1>Courses</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Course Title</th>
+                    <th>Semester</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="https://www.coursera.org/learn/agile-software-development" target="_blank">Agile software development</a></td>
+                    <td>fall</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="https://www.open.edu/openlearn/science-maths-technology/systems-modelling/content-section-0?active-tab=description-tab" target="_blank">system modelling</a></td>
+                    <td>fall</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="https://www.coursera.org/specializations/requirements-engineering-secure-software" target="_blank">Requirements Engineering</a></td>
+                    <td>fall</td>
+                    <td>99</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="https://www.classcentral.com/course/human-computer-interaction-the-georgia-institute--14444" target="_blank">Human Computer Interaction</a></td>
+                    <td>fall</td>
+                    <td>65</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">End of Courses</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    <form action="/submit" method="POST">
+        <label for="course-title">Course Title:</label><br>
+        <input type="text" id="course-title" name="course-title"><br><br>
+    
+        <label for="semester">Semester:</label><br>
+        <select id="semester" name="semester">
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+        </select><br><br>
+    
+        <label>Attendance:</label><br>
+        <input type="radio" id="virtual" name="attendance" value="Virtual">
+        <label for="virtual">Virtual attendance</label><br>
+        <input type="radio" id="physical" name="attendance" value="Physical">
+        <label for="physical">Physical attendance</label><br><br>
+    
+        <input type="submit" value="Submit">
+    </form>   
+       
+    <footer>
+        <ul>
+        <li>
+        <a href="https://www.inpt.ac.ma/" target="_blank">moodle</a>
+        </li>
+        <li>
+            <a href="https://m.inpt.ac.ma/" target="_blank">Courses</a>
+        </li>
+        </ul>
+    </footer>
+       
+ </body>
+</html>
